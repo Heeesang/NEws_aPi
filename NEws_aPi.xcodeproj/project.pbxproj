@@ -54,6 +54,9 @@
 		05BD086328333F47007E4F35 /* NEws_aPi */ = {
 			isa = PBXGroup;
 			children = (
+				05BD087D283371CF007E4F35 /* Controller */,
+				05BD087B283371A3007E4F35 /* Views */,
+				05BD087A2833719A007E4F35 /* Models */,
 				05BD086428333F47007E4F35 /* AppDelegate.swift */,
 				05BD086628333F47007E4F35 /* SceneDelegate.swift */,
 				05BD086D28333F48007E4F35 /* Assets.xcassets */,
@@ -62,6 +65,27 @@
 				05BD08782833410A007E4F35 /* MainVC.swift */,
 			);
 			path = NEws_aPi;
+			sourceTree = "<group>";
+		};
+		05BD087A2833719A007E4F35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		05BD087B283371A3007E4F35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		05BD087D283371CF007E4F35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
