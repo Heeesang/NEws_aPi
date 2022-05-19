@@ -12,6 +12,7 @@
 		05BD086E28333F48007E4F35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05BD086D28333F48007E4F35 /* Assets.xcassets */; };
 		05BD087128333F48007E4F35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BD086F28333F48007E4F35 /* LaunchScreen.storyboard */; };
 		05BD08792833410A007E4F35 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD08782833410A007E4F35 /* MainVC.swift */; };
+		05BD087F2835ECB2007E4F35 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BD087E2835ECB2007E4F35 /* ArticleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		05BD087028333F48007E4F35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05BD087228333F48007E4F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05BD08782833410A007E4F35 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		05BD087E2835ECB2007E4F35 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,6 @@
 				05BD086D28333F48007E4F35 /* Assets.xcassets */,
 				05BD086F28333F48007E4F35 /* LaunchScreen.storyboard */,
 				05BD087228333F48007E4F35 /* Info.plist */,
-				05BD08782833410A007E4F35 /* MainVC.swift */,
 			);
 			path = NEws_aPi;
 			sourceTree = "<group>";
@@ -70,6 +71,7 @@
 		05BD087A2833719A007E4F35 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				05BD087E2835ECB2007E4F35 /* ArticleModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -84,6 +86,7 @@
 		05BD087D283371CF007E4F35 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				05BD08782833410A007E4F35 /* MainVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			files = (
 				05BD086528333F47007E4F35 /* AppDelegate.swift in Sources */,
 				05BD08792833410A007E4F35 /* MainVC.swift in Sources */,
+				05BD087F2835ECB2007E4F35 /* ArticleModel.swift in Sources */,
 				05BD086728333F47007E4F35 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
