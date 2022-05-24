@@ -14,7 +14,8 @@ class MainVC: UIViewController
 {
    
     let table = UITableView()
-    let testarr = ["a","b","c"]
+    let user: [User] = [User(profile: UIImage(named: "형록")!, name: "김형록"),
+                        User(profile: UIImage(named: "형록")!, name: "김형록")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,6 @@ class MainVC: UIViewController
         view.addSubview(table)
         attribute()
         layout()
-        
     }
     
     func layout() {
@@ -33,22 +33,24 @@ class MainVC: UIViewController
     }
     
     func attribute() {
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.register(CustomCell.self, forCellReuseIdentifier: CustomCell.cellId)
         table.delegate = self
         table.dataSource = self
+        table.rowHeight = 100
     }
     
 }
 
 extension MainVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testarr.count
+        return user.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as UITableViewCell
+        let cell = table.dequeueReusableCell(withIdentifier: CustomCell.cellId, for: indexPath) as! CustomCell
         
-        cell.textLabel?.text = testarr[indexPath.row]
+        cell.profile.image = user[indexPath.row].profile
+        cell.name.text = user[indexPath.row].name
         
         return cell
     }

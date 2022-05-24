@@ -6,12 +6,12 @@ class CustomCell: UITableViewCell{
         
     static let cellId = "CellId"
     
-    private let urlToImage = UIImageView()
-    private let name = UILabel()
+    let profile = UIImageView()
+    let name = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-    
+        layout()
     }
     
     required init?(coder: NSCoder) {
@@ -19,20 +19,18 @@ class CustomCell: UITableViewCell{
     }
     
     func layout() {
-        self.addSubview(urlToImage)
+        self.addSubview(profile)
         self.addSubview(name)
         
-        urlToImage.snp.makeConstraints{
-            $0.width.equalTo(60)
-            $0.height.equalTo(60)
-            $0.leading.equalTo(self.leadingAnchor as! ConstraintRelatableTarget)
-            $0.center.equalTo(self.centerYAnchor as! ConstraintRelatableTarget)
-        }
+        profile.translatesAutoresizingMaskIntoConstraints = false
+        profile.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
+        profile.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        profile.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        profile.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
-        name.snp.makeConstraints{
-            $0.leading.equalTo(urlToImage)
-            $0.center.equalTo(self.centerYAnchor as! ConstraintRelatableTarget)
-        }
+        name.translatesAutoresizingMaskIntoConstraints = false
+        name.leadingAnchor.constraint(equalTo: profile.trailingAnchor, constant: 10).isActive = true
+        name.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
     }
     
