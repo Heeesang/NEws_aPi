@@ -67,6 +67,7 @@
 		05BD086328333F47007E4F35 /* NEws_aPi */ = {
 			isa = PBXGroup;
 			children = (
+				05C2DD44283E1CDB00851317 /* Network */,
 				05BD087D283371CF007E4F35 /* Controller */,
 				05BD087B283371A3007E4F35 /* Views */,
 				05BD087A2833719A007E4F35 /* Models */,
@@ -102,6 +103,13 @@
 				05BD08782833410A007E4F35 /* MainVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		05C2DD44283E1CDB00851317 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		05C9CD5F28370DAC00A73509 /* Cell */ = {
