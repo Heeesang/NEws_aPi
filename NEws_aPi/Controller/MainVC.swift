@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 import Then
+import Moya
 
 class MainVC: UIViewController
 {
@@ -23,6 +24,8 @@ class MainVC: UIViewController
         view.addSubview(table)
         attribute()
         layout()
+        
+       
     }
     
     func layout() {

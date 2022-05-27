@@ -7,15 +7,25 @@
 
 import Foundation
 
-struct articleResponse: Decodable{
+struct articleResponse: Codable{
 
-    let articles: [articles]
+    let articles: Articles
     
+    struct Articles: Codable {
+        let title: String
+        let description: String
+        let url: String
+        let urlToImage: String
+    }
 }
 
-struct articles: Decodable {
-    let title: String
-    let description: String
-    let url: String
-    let urlToImage: String
+
+
+struct newsListRequest {
+    struct newsParam{
+        var q: String
+        var form: String
+        var sortBy: String
+        var apikey: String
+    }
 }

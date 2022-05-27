@@ -7,12 +7,12 @@
 
 import Moya
 
-public enum News {
+public enum NewsAPI {
     
     case articles(q: String, from: String, sortBy: String, apiKey: String)
 }
 
-extension News: TargetType {
+extension NewsAPI: TargetType {
     
     public var baseURL: URL{
         guard let url = URL(string: "https://newsapi.org") else {
