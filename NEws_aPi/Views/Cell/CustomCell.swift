@@ -17,13 +17,12 @@ class CustomCell: UITableViewCell{
         let provider = MoyaProvider<NewsAPI>()
         provider.request(.articles(q: "tesla", from: "2022-04-27", sortBy: "publishedAt", apiKey: "d6b2e20b479c457bb60c3b2a942803ab")){ (result) in
             switch result {
-            case let .success(response):
+            case .success(let response):
                 let result = try? response.map(articleResponse.self)
                 self.name.text = result?.articles.title
-                print("yeah")
-            case let .failure(error):
+                print(result)
+            case .failure(let error):
                 print(error.localizedDescription)
-       
             }
         }
         

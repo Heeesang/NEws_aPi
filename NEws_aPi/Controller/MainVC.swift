@@ -15,8 +15,7 @@ class MainVC: UIViewController
 {
    
     let table = UITableView()
-    let user: [User] = [User(profile: UIImage(named: "형록")!, name: "김형록"),
-                        User(profile: UIImage(named: "형록")!, name: "김형록")]
+    let articlse: [articleResponse] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,14 +45,13 @@ class MainVC: UIViewController
 
 extension MainVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return user.count
+        return articlse.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: CustomCell.cellId, for: indexPath) as! CustomCell
         
-        cell.profile.image = user[indexPath.row].profile
-        cell.name.text = user[indexPath.row].name
+        cell.name.text = articlse[indexPath.row].articles.title
         
         return cell
     }
