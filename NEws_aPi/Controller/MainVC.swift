@@ -23,7 +23,25 @@ class MainVC: UIViewController
         view.addSubview(table)
         attribute()
         layout()
+        print("da")
         
+        let provider = MoyaProvider<NewsAPI>()
+        provider.request(.articles(q: "tesla", from: "2022-04-30", sortBy: "publishedAt", apiKey: "d6b2e20b479c457bb60c3b2a942803ab")){ (result) in
+            switch result {
+            case .success(let response):
+                let responseData = response.data
+                do {
+                    let result = try? response.map(articleResponse.self)
+                    let decoded = try JSONDecoder().decode(articleResponse.self, from: responseData)
+                    print(decoded)
+                    print("yae")
+                } catch {
+                    print(error.localizedDescription)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
        
     }
     
