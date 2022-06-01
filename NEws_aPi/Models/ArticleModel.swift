@@ -9,13 +9,16 @@ import Foundation
 
 struct articleResponse: Codable{
 
-    let articles: Articles
+    let articles: [Articles]
     
     struct Articles: Codable {
         let title: String
         let description: String
-        let url: String
-        let urlToImage: String
+        
+        private enum CodingKeys: String, CodingKey{
+            case title = "title"
+            case description = "description"
+        }
     }
 }
 

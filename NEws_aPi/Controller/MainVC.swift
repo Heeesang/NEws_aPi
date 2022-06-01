@@ -26,15 +26,14 @@ class MainVC: UIViewController
         print("da")
         
         let provider = MoyaProvider<NewsAPI>()
-        provider.request(.articles(q: "tesla", from: "2022-04-30", sortBy: "publishedAt", apiKey: "d6b2e20b479c457bb60c3b2a942803ab")){ (result) in
+        provider.request(.articles(q: "tesla", from: "2022-05-01", sortBy: "publishedAt", apiKey: "d6b2e20b479c457bb60c3b2a942803ab")){ (result) in
             switch result {
             case .success(let response):
                 let responseData = response.data
                 do {
-                    let result = try? response.map(articleResponse.self)
                     let decoded = try JSONDecoder().decode(articleResponse.self, from: responseData)
                     print(decoded)
-                    print("yae")
+                
                 } catch {
                     print(error.localizedDescription)
                 }
@@ -69,7 +68,6 @@ extension MainVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: CustomCell.cellId, for: indexPath) as! CustomCell
         
-        cell.name.text = articlse[indexPath.row].articles.title
         
         return cell
     }
