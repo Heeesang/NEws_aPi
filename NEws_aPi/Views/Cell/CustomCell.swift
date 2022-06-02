@@ -23,17 +23,16 @@ class CustomCell: UITableViewCell{
     }
     
     func layout() {
-        self.addSubview(profile)
+//        self.addSubview(profile)
         self.addSubview(name)
         
-        profile.translatesAutoresizingMaskIntoConstraints = false
-        profile.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
-        profile.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        profile.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        profile.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        
+//        profile.translatesAutoresizingMaskIntoConstraints = false
+//        profile.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
+//        profile.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+//        profile.widthAnchor.constraint(equalToConstant: 60).isActive = true
+//        profile.heightAnchor.constraint(equalToConstant: 60).isActive = true
+//
         name.translatesAutoresizingMaskIntoConstraints = false
-        name.leadingAnchor.constraint(equalTo: profile.trailingAnchor, constant: 10).isActive = true
         name.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
     }
