@@ -10,5 +10,5 @@ target 'NEws_aPi' do
     pod "Moya"
     pod "SnapKit"
     pod "Then"
-    
+    pod "Kingfisher"
 end

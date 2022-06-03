@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import Then
 import Moya
+import Kingfisher
 
 class MainVC: UIViewController
 {
@@ -71,7 +72,9 @@ extension MainVC:UITableViewDelegate,UITableViewDataSource{
         let cell = table.dequeueReusableCell(withIdentifier: CustomCell.cellId, for: indexPath) as! CustomCell
         
         cell.name.text = articleData[indexPath.row].title
-       
+        let url = URL(string: articleData[indexPath.row].urlToImage)
+        cell.profile.kf.setImage(with: url)
+        
         return cell
     }
 }
