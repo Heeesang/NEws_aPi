@@ -27,7 +27,7 @@ class MainVC: UIViewController
         print("da")
         
         let provider = MoyaProvider<NewsAPI>()
-        provider.request(.articles(q: "tesla", from: "2022-05-02", sortBy: "publishedAt", apiKey: "d6b2e20b479c457bb60c3b2a942803ab")){ (result) in
+        provider.request(.articles(q: "tesla", from: "2022-05-03", sortBy: "publishedAt", apiKey: "d6b2e20b479c457bb60c3b2a942803ab")){ (result) in
             switch result {
             case .success(let response):
                 let responseData = response.data
@@ -72,7 +72,6 @@ extension MainVC:UITableViewDelegate,UITableViewDataSource{
         
         cell.name.text = articleData[indexPath.row].title
        
-//
         return cell
     }
 }
