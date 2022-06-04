@@ -25,8 +25,25 @@ class MainVC: UIViewController
         view.addSubview(table)
         attribute()
         layout()
-        print("da")
+        fetchNews()
         
+    }
+    
+    func layout() {
+        table.snp.makeConstraints{
+            $0.edges.equalToSuperview()
+        }
+        
+    }
+    
+    func attribute() {
+        table.register(CustomCell.self, forCellReuseIdentifier: CustomCell.cellId)
+        table.delegate = self
+        table.dataSource = self
+        table.rowHeight = 100
+    }
+    
+    func fetchNews() {
         let provider = MoyaProvider<NewsAPI>()
         provider.request(.articles(country: "kr", category: "business", apiKey: "d6b2e20b479c457bb60c3b2a942803ab")){ (result) in
             switch result {
@@ -44,21 +61,6 @@ class MainVC: UIViewController
                 print(error.localizedDescription)
             }
         }
-       
-    }
-    
-    func layout() {
-        table.snp.makeConstraints{
-            $0.edges.equalToSuperview()
-        }
-        
-    }
-    
-    func attribute() {
-        table.register(CustomCell.self, forCellReuseIdentifier: CustomCell.cellId)
-        table.delegate = self
-        table.dataSource = self
-        table.rowHeight = 100
     }
     
 }
