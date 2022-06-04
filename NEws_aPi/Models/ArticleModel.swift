@@ -21,12 +21,12 @@ struct articleResponse: Codable{
 struct Articles: Codable {
     var id = UUID()
     var title: String
-    var description: String
-    var urlToImage: String
+//    var description: String
+//    var urlToImage: String
     private enum CodingKeys: String, CodingKey{
         case title = "title"
-        case description = "description"
-        case urlToImage = "urlToImage"
+//        case description = "description"
+//        case urlToImage = "urlToImage"
     }
 }
 

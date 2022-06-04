@@ -9,7 +9,7 @@ import Moya
 
 public enum NewsAPI {
     
-    case articles(q: String, from: String, sortBy: String, apiKey: String)
+    case articles(country: String, category: String, apiKey: String)
 }
 
 extension NewsAPI: TargetType {
@@ -25,7 +25,7 @@ extension NewsAPI: TargetType {
     public var path: String {
         switch self {
         case .articles:
-            return "/v2/everything"
+            return "/v2/top-headlines"
         }
     }
     
@@ -42,8 +42,8 @@ extension NewsAPI: TargetType {
     
     public var task: Task {
         switch self {
-        case .articles(let q, let from, let sortBy, let apiKey):
-            return .requestParameters(parameters: ["q": q, "from": from, "sortBy" : sortBy, "apiKey" : apiKey], encoding: URLEncoding.default)
+        case .articles(let country, let category, let apiKey):
+            return .requestParameters(parameters: ["country": country, "category": category, "apiKey" : apiKey], encoding: URLEncoding.default)
         }
     }
     
