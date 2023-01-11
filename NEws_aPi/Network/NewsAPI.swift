@@ -4,11 +4,9 @@
 //
 //  Created by 곽희상 on 2022/05/26.
 //
-
 import Moya
 
 public enum NewsAPI {
-    
     case articles(country: String, category: String, apiKey: String)
 }
 

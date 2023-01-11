@@ -15,8 +15,6 @@ class CustomCell: UITableViewCell{
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         layout()
         
-       
-        
     }
     
     required init?(coder: NSCoder) {
@@ -36,7 +34,6 @@ class CustomCell: UITableViewCell{
         name.translatesAutoresizingMaskIntoConstraints = false
         name.leadingAnchor.constraint(equalTo: profile.trailingAnchor, constant: 10).isActive = true
         name.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        
     }
     
     

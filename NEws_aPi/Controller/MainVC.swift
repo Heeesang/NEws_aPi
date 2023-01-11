@@ -66,6 +66,7 @@ class MainVC: UIViewController
 }
 
 extension MainVC:UITableViewDelegate,UITableViewDataSource{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return articleData.count
     }

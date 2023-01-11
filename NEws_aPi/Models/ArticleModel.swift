@@ -32,11 +32,11 @@ struct Articles: Codable {
 
 
 
-struct newsListRequest {
-    struct newsParam{
-        var q: String
-        var form: String
-        var sortBy: String
-        var apikey: String
-    }
-}
+//struct newsListRequest {
+//    struct newsParam{
+//        var q: String
+//        var form: String
+//        var sortBy: String
+//        var apikey: String
+//    }
+//}
